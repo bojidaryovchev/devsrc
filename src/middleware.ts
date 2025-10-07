@@ -1,6 +1,6 @@
 import { auth } from "@/lib/auth";
+import { applySecurityHeaders } from "@/lib/headers";
 import { NextResponse } from "next/server";
-import { applySecurityHeaders } from "./lib/headers";
 
 export default auth(() => {
   const response = NextResponse.next();
