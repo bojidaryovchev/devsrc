@@ -1,7 +1,7 @@
 "use client";
 
 import { useCalendly } from "@/hooks/use-calendly";
-import type { CalendlyInlineWidgetOptions, CalendlyPrefill, CalendlyUtm } from "@/types/calendly.d";
+import type { CalendlyInlineWidgetOptions, CalendlyPrefill, CalendlyUtm } from "@/typings/calendly";
 import React, { useEffect, useRef } from "react";
 
 export interface CalendlyInlineWidgetProps {

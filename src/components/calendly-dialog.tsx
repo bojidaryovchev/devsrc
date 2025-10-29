@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useCalendlyTheme } from "@/hooks/use-calendly-theme";
-import type { CalendlyPrefill, CalendlyUtm } from "@/types/calendly.d";
+import type { CalendlyPrefill, CalendlyUtm } from "@/typings/calendly";
 import React from "react";
 
 export interface CalendlyDialogProps {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCalendly } from "@/hooks/use-calendly";
-import type { CalendlyPopupWidgetOptions, CalendlyPrefill, CalendlyUtm } from "@/types/calendly.d";
+import type { CalendlyPopupWidgetOptions, CalendlyPrefill, CalendlyUtm } from "@/typings/calendly";
 import React from "react";
 
 export interface CalendlyPopupButtonProps {
