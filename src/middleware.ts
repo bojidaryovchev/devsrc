@@ -1,13 +1,37 @@
+import { DEFAULT_THEME } from "@/constants";
 import { auth } from "@/lib/auth";
-import { applySecurityHeaders } from "@/lib/headers";
-import { NextResponse } from "next/server";
+import { isRuntimeEnv } from "@/lib/env";
+import { setSecurityHeaders } from "@/lib/headers";
 
-export default auth(() => {
-  const response = NextResponse.next();
+import { NextRequest, NextResponse } from "next/server";
 
-  applySecurityHeaders(response);
+const setPathnameHeader = (res: NextResponse, pathname: string) => {
+  res.headers.set("x-pathname", pathname);
+};
 
-  return response;
+const setDefaultTheme = (req: NextRequest, res: NextResponse) => {
+  const theme = req.cookies.get("theme");
+
+  if (!theme) {
+    res.cookies.set("theme", DEFAULT_THEME, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365, // 1y in seconds
+      httpOnly: false,
+      secure: isRuntimeEnv("production"),
+      sameSite: "lax",
+    });
+  }
+};
+
+export default auth((req) => {
+  const { pathname } = req.nextUrl;
+  const res = NextResponse.next();
+
+  setPathnameHeader(res, pathname);
+  setDefaultTheme(req, res);
+  setSecurityHeaders(res);
+
+  return res;
 });
 
 export const config = {
