@@ -1,3 +1,5 @@
+import { Theme } from "./types/theme.enum";
+
 // Support email
 export const CONTACT_EMAIL = "support@brrrmatch.com";
 
@@ -17,3 +19,5 @@ export const SECURITY_HEADERS = {
   REFERRER_POLICY: "strict-origin-when-cross-origin",
   PERMISSIONS_POLICY: "camera=(), microphone=(), geolocation=()",
 };
+
+export const DEFAULT_THEME = Theme.DARK;
