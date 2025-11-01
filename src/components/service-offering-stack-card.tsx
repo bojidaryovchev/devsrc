@@ -68,7 +68,7 @@ const ServiceOfferingStackCard: React.FC<Props> = ({ serviceOffering, index }) =
       style={{
         top: `${index * 40}px`,
       }}
-      className="sticky flex min-h-[400px] flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-xl"
+      className="sticky flex flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-xl"
     >
       <ServiceOfferingIcon type={serviceOffering.type} />
       <h2 className="mb-4 text-3xl font-bold text-gray-900">{serviceOffering.title}</h2>
