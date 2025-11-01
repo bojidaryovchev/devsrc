@@ -2,7 +2,6 @@ import { DEFAULT_THEME } from "@/constants";
 import { auth } from "@/lib/auth";
 import { isRuntimeEnv } from "@/lib/env";
 import { setSecurityHeaders } from "@/lib/headers";
-
 import { NextRequest, NextResponse } from "next/server";
 
 const setPathnameHeader = (res: NextResponse, pathname: string) => {
