@@ -1,4 +1,6 @@
-import { Theme } from "./types/theme.enum";
+import { ServiceOfferingType } from "@/types/service-offering-type.enum";
+import { ServiceOffering } from "@/types/service-offering.interface";
+import { Theme } from "@/types/theme.enum";
 
 // Support email
 export const CONTACT_EMAIL = "support@brrrmatch.com";
@@ -21,3 +23,26 @@ export const SECURITY_HEADERS = {
 };
 
 export const DEFAULT_THEME = Theme.DARK;
+
+export const SERVICE_OFFERINGS: ServiceOffering[] = [
+  {
+    type: ServiceOfferingType.WEB,
+    title: "Web Development",
+    description: "Custom websites built with modern technologies for optimal performance and user experience.",
+  },
+  {
+    type: ServiceOfferingType.MOBILE,
+    title: "Mobile Apps",
+    description: "Native and cross-platform mobile applications that engage users and drive growth.",
+  },
+  {
+    type: ServiceOfferingType.SEO,
+    title: "SEO Services",
+    description: "Data-driven SEO strategies to boost your visibility and organic traffic.",
+  },
+  {
+    type: ServiceOfferingType.AD_CAMPAIGN,
+    title: "Ad Campaigns",
+    description: "Targeted advertising campaigns that maximize ROI and reach your ideal audience.",
+  },
+];

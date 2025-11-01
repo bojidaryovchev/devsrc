@@ -1,6 +1,8 @@
 import GoogleSignIn from "@/components/google-sign-in";
+import OurServicesSection from "@/components/our-services-section";
 import ScheduleMeetingButton from "@/components/schedule-meeting-button";
 import SignOutButton from "@/components/sign-out-button";
+import StatsSection from "@/components/stats-section";
 import ThemeSwitcher from "@/components/theme-switcher";
 import type React from "react";
 
@@ -18,6 +20,10 @@ const Home: React.FC = () => {
       </p>
 
       <ScheduleMeetingButton />
+
+      <StatsSection />
+
+      <OurServicesSection />
     </>
   );
 };
