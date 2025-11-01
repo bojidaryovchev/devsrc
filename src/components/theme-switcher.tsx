@@ -13,7 +13,6 @@ const ThemeSwitcher: React.FC = () => {
   const { setTheme } = useTheme();
 
   const clickHandler = () => {
-    console.log(42);
     const otherTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
     setTheme(otherTheme);
     setCookie("theme", otherTheme, { path: "/" });
