@@ -51,9 +51,10 @@ export default $config({
       },
       server: {
         architecture: "arm64",
-        install: ["react", "react-dom"],
       },
       environment: {
+        // https://github.com/opennextjs/opennextjs-aws/issues/624
+        NODE_ENV: "production",
         DEPLOYMENT_ENV: $app.stage,
         DATABASE_URL: process.env.DATABASE_URL!,
         AUTH_SECRET: process.env.AUTH_SECRET!,
