@@ -1,8 +1,8 @@
-import AuthProviders from "@/components/auth-providers";
-import HtmlProviders from "@/components/html-providers";
-import SafeThemeProviders from "@/components/safe-theme-providers";
-import ThemeProviders from "@/components/theme-providers";
-import ToasterProviders from "@/components/toaster-providers";
+import AuthProviders from "@/components/providers/auth-providers";
+import HtmlProviders from "@/components/providers/html-providers";
+import SafeThemeProviders from "@/components/providers/safe-theme-providers";
+import ThemeProviders from "@/components/providers/theme-providers";
+import ToasterProviders from "@/components/providers/toaster-providers";
 import React, { PropsWithChildren } from "react";
 
 const Providers: React.FC<PropsWithChildren> = ({ children }) => {
