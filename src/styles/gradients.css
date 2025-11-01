@@ -1,22 +1,27 @@
 @theme {
-  --brand-gradient: linear-gradient(135deg, #6366f1 0%, #8855c5 40%, #ec4899 100%);
-  --action-gradient: linear-gradient(90deg, #7c3aed 0%, #9333ea 50%, #4338ca 100%);
-  --midnight-purple-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 35%, #f093fb 70%, #f5f7fa 100%);
-  --ocean-depth-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #89f7fe 50%, #66a6ff 75%, #667eea 100%);
+  --gradient-0: linear-gradient(135deg, #6366f1 0%, #8855c5 40%, #ec4899 100%);
+  --gradient-1: linear-gradient(90deg, #7c3aed 0%, #9333ea 50%, #4338ca 100%);
+  --gradient-2: linear-gradient(135deg, #667eea 0%, #764ba2 35%, #f093fb 70%, #f5f7fa 100%);
+  --gradient-3: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #89f7fe 50%, #66a6ff 75%, #667eea 100%);
+  --gradient-4: linear-gradient(to right, var(--color-indigo-600), var(--color-purple-400));
 }
 
-@utility bg-brand-gradient {
-  background-image: var(--brand-gradient);
+@utility bg-gradient-0 {
+  background-image: var(--gradient-0);
 }
 
-@utility bg-action-gradient {
-  background-image: var(--action-gradient);
+@utility bg-gradient-1 {
+  background-image: var(--gradient-1);
 }
 
-@utility bg-midnight-purple-gradient {
-  background-image: var(--midnight-purple-gradient);
+@utility bg-gradient-2 {
+  background-image: var(--gradient-2);
 }
 
-@utility bg-ocean-depth-gradient {
-  background-image: var(--ocean-depth-gradient);
+@utility bg-gradient-3 {
+  background-image: var(--gradient-3);
+}
+
+@utility bg-gradient-4 {
+  background-image: var(--gradient-4);
 }
