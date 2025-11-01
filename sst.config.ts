@@ -51,6 +51,7 @@ export default $config({
       },
       server: {
         architecture: "arm64",
+        install: ["react", "react-dom"],
       },
       environment: {
         DEPLOYMENT_ENV: $app.stage,
