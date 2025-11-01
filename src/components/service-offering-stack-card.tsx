@@ -10,10 +10,12 @@ interface Props {
 
 const ServiceOfferingStackCard: React.FC<Props> = ({ serviceOffering, index }) => {
   const cardRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const card = cardRef.current;
-    if (!card) return;
+    const text = textRef.current;
+    if (!card || !text) return;
 
     gsap.fromTo(
       card,
@@ -34,10 +36,31 @@ const ServiceOfferingStackCard: React.FC<Props> = ({ serviceOffering, index }) =
       },
     );
 
+    // Typewriter effect
+    const fullText = serviceOffering.description;
+    text.textContent = "";
+
+    gsap.to(
+      {},
+      {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 1,
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const charsToShow = Math.floor(progress * fullText.length);
+            text.textContent = fullText.slice(0, charsToShow);
+          },
+        },
+      },
+    );
+
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [serviceOffering.description]);
 
   return (
     <div
@@ -49,7 +72,7 @@ const ServiceOfferingStackCard: React.FC<Props> = ({ serviceOffering, index }) =
     >
       <ServiceOfferingIcon type={serviceOffering.type} />
       <h2 className="mb-4 text-3xl font-bold text-gray-900">{serviceOffering.title}</h2>
-      <p className="text-lg leading-relaxed text-gray-600">{serviceOffering.description}</p>
+      <p ref={textRef} className="min-h-[200px] text-lg leading-relaxed text-gray-600" />
     </div>
   );
 };
