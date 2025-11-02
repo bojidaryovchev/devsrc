@@ -1,16 +1,14 @@
-version: "3.8"
-
 services:
   mongodb:
-    image: mongo:7.0
-    restart: always
+    image: mongodb/mongodb-atlas-local
     environment:
-      MONGO_INITDB_ROOT_USERNAME: user
-      MONGO_INITDB_ROOT_PASSWORD: pass
+      - MONGODB_INITDB_ROOT_USERNAME=user
+      - MONGODB_INITDB_ROOT_PASSWORD=pass
     ports:
       - "27019:27017"
     volumes:
-      - mongo_data:/data/db
-
+      - data:/data/db
+      - config:/data/configdb
 volumes:
-  mongo_data:
+  data:
+  config:
