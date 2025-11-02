@@ -3,6 +3,7 @@ import OurServicesSection from "@/components/our-services-section";
 import ScheduleMeetingButton from "@/components/schedule-meeting-button";
 import SignOutButton from "@/components/sign-out-button";
 import StatsSection from "@/components/stats-section";
+import SubscribeSectionClient from "@/components/subscribe-section-client.component";
 import ThemeSwitcher from "@/components/theme-switcher";
 import type React from "react";
 
@@ -24,6 +25,8 @@ const Home: React.FC = () => {
       <StatsSection />
 
       <OurServicesSection />
+
+      <SubscribeSectionClient />
     </>
   );
 };

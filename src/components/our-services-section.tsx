@@ -30,9 +30,6 @@ const OurServicesSection: React.FC = () => {
             <ServiceOfferingStackCard key={serviceOffering.title} serviceOffering={serviceOffering} index={index} />
           ))}
         </div>
-
-        {/* Spacer for last card */}
-        <div className="h-screen" />
       </div>
     </div>
   );
