@@ -68,11 +68,11 @@ const ServiceOfferingStackCard: React.FC<Props> = ({ serviceOffering, index }) =
       style={{
         top: `${index * 40}px`,
       }}
-      className="sticky flex flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-xl"
+      className="dark:hover:shadow-3xl sticky flex flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-xl transition-all duration-300 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-800 dark:shadow-2xl dark:hover:border-gray-600"
     >
       <ServiceOfferingIcon type={serviceOffering.type} />
-      <h2 className="mb-4 text-3xl font-bold text-gray-900">{serviceOffering.title}</h2>
-      <p ref={textRef} className="min-h-[200px] text-lg leading-relaxed text-gray-600" />
+      <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100">{serviceOffering.title}</h2>
+      <p ref={textRef} className="min-h-[200px] text-lg leading-relaxed text-gray-600 dark:text-gray-300" />
     </div>
   );
 };

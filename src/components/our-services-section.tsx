@@ -18,11 +18,15 @@ const OurServicesSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-linear-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="mx-auto max-w-3xl px-4 py-16">
         <div ref={headerRef} className="mb-32 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">Our Services</h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600">Scroll down to explore our comprehensive solutions</p>
+          <h1 className="bg-gradient-4 mb-4 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+            Our Services
+          </h1>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+            Scroll down to explore our comprehensive solutions
+          </p>
         </div>
 
         <div className="space-y-8">

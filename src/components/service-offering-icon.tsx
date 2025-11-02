@@ -11,12 +11,15 @@ const ServiceOfferingIcon: React.FC<Props> = ({ type }) => {
   return (
     <>
       <div
-        className={cn("mb-6 flex h-16 w-16 items-center justify-center rounded-2xl text-white", {
-          "bg-blue-600": type === ServiceOfferingType.WEB,
-          "bg-purple-700": type === ServiceOfferingType.MOBILE,
-          "bg-cyan-600": type === ServiceOfferingType.SEO,
-          "bg-teal-600": type === ServiceOfferingType.AD_CAMPAIGN,
-        })}
+        className={cn(
+          "mb-6 flex h-16 w-16 items-center justify-center rounded-2xl text-white shadow-lg dark:shadow-xl",
+          {
+            "bg-blue-600 dark:bg-blue-500": type === ServiceOfferingType.WEB,
+            "bg-purple-700 dark:bg-purple-600": type === ServiceOfferingType.MOBILE,
+            "bg-cyan-600 dark:bg-cyan-500": type === ServiceOfferingType.SEO,
+            "bg-teal-600 dark:bg-teal-500": type === ServiceOfferingType.AD_CAMPAIGN,
+          },
+        )}
       >
         {type === ServiceOfferingType.WEB && <Code className="h-8 w-8" />}
         {type === ServiceOfferingType.MOBILE && <Smartphone className="h-8 w-8" />}
