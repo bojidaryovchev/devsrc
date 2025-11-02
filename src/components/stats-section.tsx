@@ -6,7 +6,7 @@ const StatsSection: React.FC = () => {
       <div className="border-border mt-12 border-t pt-12">
         <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
           <div>
-            <div className="mb-2 bg-linear-to-r from-(--indigo-600) to-(--purple-400) bg-clip-text text-4xl font-bold text-transparent">
+            <div className="mb-2 bg-linear-to-r from-indigo-600 to-purple-400 bg-clip-text text-4xl font-bold text-transparent">
               500+
             </div>
 
@@ -14,7 +14,7 @@ const StatsSection: React.FC = () => {
           </div>
 
           <div>
-            <div className="mb-2 bg-linear-to-r from-(--purple-400) to-(--blue-500) bg-clip-text text-4xl font-bold text-transparent">
+            <div className="mb-2 bg-linear-to-r from-purple-400 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
               98%
             </div>
 
@@ -22,7 +22,7 @@ const StatsSection: React.FC = () => {
           </div>
 
           <div>
-            <div className="mb-2 bg-linear-to-r from-(--blue-500) to-(--cyan-500) bg-clip-text text-4xl font-bold text-transparent">
+            <div className="mb-2 bg-linear-to-r from-blue-500 to-cyan-500 bg-clip-text text-4xl font-bold text-transparent">
               4.9/5
             </div>
 
@@ -30,7 +30,7 @@ const StatsSection: React.FC = () => {
           </div>
 
           <div>
-            <div className="mb-2 bg-linear-to-r from-(--cyan-500) to-(--indigo-600) bg-clip-text text-4xl font-bold text-transparent">
+            <div className="mb-2 bg-linear-to-r from-cyan-500 to-indigo-600 bg-clip-text text-4xl font-bold text-transparent">
               10+
             </div>
 

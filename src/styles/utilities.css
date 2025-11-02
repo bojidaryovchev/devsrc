@@ -1,0 +1,15 @@
+@utility max-w-container {
+  @apply mx-auto max-w-7xl p-6;
+}
+
+@utility bg-gradient-0 {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 35%, #f093fb 70%, #f5f7fa 100%);
+}
+
+@utility bg-gradient-1 {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #89f7fe 50%, #66a6ff 75%, #667eea 100%);
+}
+
+@utility bg-gradient-2 {
+  background-image: linear-gradient(to right, var(--color-indigo-600), var(--color-purple-400));
+}
